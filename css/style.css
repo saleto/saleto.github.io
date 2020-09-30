@@ -68,10 +68,17 @@ body {
 }
 h2 {
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 120;
   color: #ffffff;
   letter-spacing: 0.05em;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 120;
+  color: #ffffff;
+  letter-spacing: 0.7em;
 }
 h1::after {
   content: '';
