@@ -167,3 +167,25 @@ select {
          width: 120px;
      }
  }
+
+ .button{
+    transition-duration: 0.4s;
+    height: 30px;
+    width: 80px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    
+
+
+ }
+
+ .button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    height: 30px;
+    width: 80px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
