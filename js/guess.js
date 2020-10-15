@@ -51,12 +51,12 @@ function checkGuess() {
           }
           guesses.textContent += userGuess + ' ';
         if (userGuess === randomNumber) {
-            lastResult.textContent = 'Congratulations! You got it right!';
+            lastResult.textContent = `Congratulations! You got it right! The correct number is ${randomNumber}`;
             lastResult.style.backgroundColor = 'green';
             lowOrHi.textContent = '';
             setGameOver();
-          } else if (guessCount === 10) {
-            lastResult.textContent = '!!!GAME OVER!!!';
+          } else if (guessCount === 5) {
+            lastResult.textContent = '!!!GAME OVER!!! The correct number is: ' + randomNumber.toString();
             setGameOver();
           } else {
             lastResult.textContent = 'Wrong!';
@@ -96,6 +96,8 @@ function checkGuess() {
   function setGameOver() {
     guessField.disabled = true;
     guessSubmit.disabled = true;
+    // lastResult.textContent(randomNumber);
+
     resetButton = document.createElement('button');
     resetButton.textContent = 'Start new game';
     document.body.append(resetButton);
