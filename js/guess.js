@@ -12,6 +12,9 @@ let resetButton;
 
 guessSubmit.addEventListener('click', checkGuess);
 
+// guessSubmit.addEventListener('keyup', checkGuess);
+
+
 
 function checkGuess() {
     let userGuess = Number(guessField.value);
@@ -25,11 +28,21 @@ function checkGuess() {
     {
         alert("Please don't leave it blank");
         guessCount = guessCount -1;
+        guessField.focus();
+
+    }
+    else if(userGuess > 100 || userGuess <= 0)
+    {
+        alert("REALLY? Are you stupid or something?");
+        guessCount = guessCount -1;
+        guessField.focus();
+
     }
     else if(isNaN(userGuess))
     {
         alert("It must be a number");
         guessCount = guessCount -1;
+        guessField.focus();
 
     }
     else{
